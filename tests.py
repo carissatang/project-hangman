@@ -14,8 +14,13 @@ def test_word_is_solved():
 
     
 def test_display_letters():
+    assert display_letters("hello", "") == "_ _ _ _ _", "Should reveal no letters"
     assert display_letters("hello", "h") == "h _ _ _ _", "Should reveal only first letter"
-
+    assert display_letters("hello", "e") == "_ e _ _ _", "Should reveal only second letter"
+    assert display_letters("hello", "l") == "_ _ l l _", "Should reveal two ls"
+    assert display_letters("hello", "o") == "_ _ _ _ o", "Should reveal only last letter"
+    assert display_letters("hello", "he") == "h e _ _ _", "Should reveal only first and second letter"
+    assert display_letters("hello", "hello") == "h e l l o", "Should reveal all letters"
     
 # Test display_platform(wrong_guesses)
 # display_platform("a") -> display with head
