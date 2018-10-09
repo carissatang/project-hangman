@@ -214,7 +214,6 @@ def get_guess():
     else:
         return letter
 
-    
 def show_win_screen():
     """Will display ASCII art for a win screen"""
     print ("""
