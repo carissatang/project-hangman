@@ -1,4 +1,4 @@
-     def main():
+def main():
     secret_word = get_secret_word()
     correct_guesses = ""
     wrong_guesses = ""
